@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Linux鸟哥第0章]]></title>
+    <url>%2F2019%2F04%2F09%2FLinux%E9%B8%9F%E5%93%A5%E7%9A%84%E7%A7%81%E6%88%BF%E8%8F%9C0%2F</url>
+    <content type="text"><![CDATA[第0章 计算机概论0.2 个人计算机架构与接口设备 0.2.0 芯片组芯片组 分为两个桥接器来控制各组件的通信，分别是 北桥负责连接速度较快的CPU、内存、显卡，又叫系统总线 南桥负责连接速度较慢的周边接口，如硬盘、USB、网卡等，又叫IO总线 0.2.1 CPUCPU 微指令集和频率同时影响CPU工作效率 各个组件都是通过南北桥连接在一起，所以各组件最好速度一致。 外频 CPU与外部组件进行数据传输/运算时的速度 倍频 CPU内部用来加速工作性能的倍数，单位为倍 CPU频率 = 外频 * 倍频 超频 将CPU的倍频或外频通过主板的设定功能更改成较高频率。但CPU倍频通常在出厂时已经被锁定无法修改，因此外频常被超频。 频率非正常速度，有可能造成死机]]></content>
+      <categories>
+        <category>Linux鸟哥的私房菜</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Markdown简单使用]]></title>
     <url>%2F2019%2F04%2F04%2FMarkdown%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%2F</url>
-    <content type="text"><![CDATA[这个是一级标题这个是二级标题 列表1 列表2 a 子列表1 b 字列表2 列表3 baidu 斜字体 加粗字体 &lt;html&gt;&lt;/html&gt; 123&lt;html&gt; &lt;head&gt;代码块&lt;/head&gt;&lt;/html&gt; 我的内容是引用的]]></content>
+    <content type="text"><![CDATA[这个是一级标题这个是二级标题 列表1 列表2 列表3 a 子列表1 b 字列表2 列表3 baidu 斜字体 加粗字体 &lt;html&gt;&lt;/html&gt; 123&lt;html&gt; &lt;head&gt;代码块&lt;/head&gt;&lt;/html&gt; 我的内容是引用的]]></content>
       <categories>
         <category>Markdown</category>
       </categories>
