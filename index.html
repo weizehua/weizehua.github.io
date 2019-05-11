@@ -317,7 +317,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/05/11/1课程简介及算法分析/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2019/05/11/1课程简介及算法分析/" itemprop="url">MIT算法导论第1章</a></h1>
         
 
         <div class="post-meta">
@@ -329,7 +329,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-11T15:17:53+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-11T22:49:51+08:00">
                 2019-05-11
               </time>
             
@@ -339,6 +339,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法导论/" itemprop="url" rel="index">
+                    <span itemprop="name">算法导论</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -368,110 +390,14 @@
 
       
         
-          
-            <h1 id="算法导论-MIT"><a href="#算法导论-MIT" class="headerlink" title="算法导论-MIT"></a>算法导论-MIT</h1><h2 id="第一节-课程简介及算法分析"><a href="#第一节-课程简介及算法分析" class="headerlink" title="第一节 课程简介及算法分析"></a>第一节 课程简介及算法分析</h2><h3 id="1-1-为什么要学习算法"><a href="#1-1-为什么要学习算法" class="headerlink" title="1.1 为什么要学习算法"></a>1.1 为什么要学习算法</h3><ul>
-<li>性能像货币，其他东西像水、空气等等东西。性能是处于最底层的东西。</li>
-<li>性能是一个衡量标准，它像是货币，人们甚至愿意用性能来交换其他东西，比如JAVA比C慢，但人们宁愿牺牲性能也要用JAVA来编程</li>
-</ul>
-<h3 id="1-2-一些算法的基本概念"><a href="#1-2-一些算法的基本概念" class="headerlink" title="1.2 一些算法的基本概念"></a>1.2 一些算法的基本概念</h3><h4 id="1-2-1-排序"><a href="#1-2-1-排序" class="headerlink" title="1.2.1 排序"></a>1.2.1 排序</h4><ul>
-<li><p>插入排序 </p>
-<ul>
-<li><p>伪代码</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Insert.Sort(A,n) <span class="comment">//Sort[1...n]</span></span><br><span class="line">    <span class="keyword">for</span> j = <span class="number">2</span> to n</span><br><span class="line">        <span class="keyword">do</span>  key=A[j]</span><br><span class="line">            i = j<span class="number">-1</span></span><br><span class="line">        <span class="keyword">while</span> i&gt;<span class="number">0</span> <span class="keyword">and</span> A[i] &gt; key</span><br><span class="line">            <span class="keyword">do</span>  A[i+<span class="number">1</span>] = A[i]</span><br><span class="line">                i = i<span class="number">-1</span></span><br><span class="line">        A[i+<span class="number">1</span>] = key</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>执行时间</p>
-<ul>
-<li>取决于输入序列（如already sorted最好，逆序最差）</li>
-<li>取决于输入序列的size<ul>
-<li>依输入的规模将其参数化，把运行时间看作待排列数据规模的函数</li>
-</ul>
-</li>
-<li>上界<ul>
-<li>代表了对用户的承诺</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>分析类型<ul>
-<li>最坏情况分析（常用）<ul>
-<li>T(n) = 输入规模为n时的最长运行时间</li>
-<li>T(n)在某种意义上只能算一种相关性，而不能算函数，因为还牵扯到输入规模n之下到底是怎么样的一个输入</li>
-</ul>
-</li>
-<li>平均情况分析<ul>
-<li>T(n) = 输入规模为n时所有可能输入的期望时间</li>
-<li>期望时间：每种输入出现的概率*每种输入的运行时间。是一种加权平均。</li>
-<li>无法知道出现的概率。需要一个有关输入的统计分布的假设。</li>
-</ul>
-</li>
-<li>最好情况分析-假象欺骗<ul>
-<li>欺骗。可以用一个慢速算法，但它对于某些输入很快。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>插入排序的最差情况时间？<ul>
-<li>取决于运行它的计算机<ul>
-<li>相对速度：在同样的计算机上运行</li>
-<li>绝对速度：在不同的计算机上运行</li>
-</ul>
-</li>
-<li>逆序情况<ul>
-<li>$$T(n) = \sum_{j=2}^n{\theta(n)} = \theta(n^2)$$</li>
-</ul>
-</li>
-<li>θ是个弱符号，与其说是个运算符号，不如说是个描述符号</li>
-<li>插入排序快吗？<ul>
-<li>对于很小的n，挺快的。对大的n，很慢</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>BIG IDEA<ul>
-<li>渐进分析<ul>
-<li>忽略掉依赖于机器的常量</li>
-<li>关注运行时间的增长而不是去检查实际运行时间</li>
-</ul>
-</li>
-<li>渐进符号<ul>
-<li>θ符号<ul>
-<li>写个公式，弃去它的低阶项，并忽略前面的常数因子。</li>
-<li>EX. $3n^3 + 90n^2 - 5n + 6046 = \theta(n^3)$</li>
-<li>$n\to\infty$时，θ(n<sup>2</sup>)算法迟早会战胜一个θ(n<sup>3</sup>)算法。即使θ(n<sup>2</sup>)跑在一台慢计算机而θ(n<sup>3</sup>)跑在一台快计算机。它能一举满足相对和绝对速度的双重比较要求。</li>
-<li>我们关注慢速算法，虽然在渐进的观点看可能比较慢，但是仍然可以在合理的规模下运行得更快。（数学思维+工程思维）</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>归并排序<br>  MergeSort A[1…n] | T(n)<br>  —|— </p>
-<ol>
-<li>If n = 1, done |  θ(1)</li>
-<li>递归地，排序 A[1,…,ceil(n/2)] 和A [ceil(n/2)+1,….,n]  | 2T(n/2)</li>
-<li>把排好序的两个表归并 | θ(n)</li>
-</ol>
-<ul>
-<li>关键子步骤：归并。n个元素时间为θ(n)，常称为线性时间。<blockquote>
-<p>因此<br>  $$T(n) = \begin{cases}<br>  \theta(1), if n=1\<br>  2T(n/2)+\theta(n)+\theta(1) = 2T(n/2)+\theta(n)\<br>  \end{cases}<br>  $$</p>
-</blockquote>
-</li>
-<li><p>如何解递归式——递归树方法<br>$T(n)=2T(n/2)+cn$，const c&gt;0<br>把上式写成树状 T(n) = </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">cn--&gt;T(n/2)</span><br><span class="line">cn--&gt;T`(n/2)</span><br></pre></td></tr></table></figure>
-<p>等于</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">cn--&gt;cn/2</span><br><span class="line">cn--&gt;`(cn/2)</span><br><span class="line">cn/2--&gt;T(n/4)</span><br><span class="line">cn/2--&gt;T`(n/4)</span><br><span class="line">`(cn/2)--&gt;T``(n/4)</span><br><span class="line">`(cn/2)--&gt;T```(n/4)</span><br></pre></td></tr></table></figure>
-<p>等于…</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">cn--&gt;cn/2</span><br><span class="line">cn--&gt;`(cn/2)</span><br><span class="line">cn/2--&gt;T(n/4)</span><br><span class="line">cn/2--&gt;T`(n/4)</span><br><span class="line">`(cn/2)--&gt;T``(n/4)</span><br><span class="line">`(cn/2)--&gt;T```(n/4)</span><br><span class="line">T(n/4)--&gt;...</span><br><span class="line">... --&gt;θ1</span><br></pre></td></tr></table></figure>
-<p>树的高度h = lgn<br>叶节点数目leaves = n<br>每一层都做了cn的工作，叶节点层加起来做了θ(n)的工作。故<br>$$T(n) = cn*lgn + \theta(n) = \theta(nlgn)$$   </p>
-</li>
-<li>超过30个元素，归并就比插入快。</li>
-</ul>
-</li>
-</ul>
-
-          
+          <h1 id="算法导论-MIT"><a href="#算法导论-MIT" class="headerlink" title="算法导论-MIT"></a>算法导论-MIT</h1>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/05/11/1课程简介及算法分析/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1483,7 +1409,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1494,7 +1420,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
