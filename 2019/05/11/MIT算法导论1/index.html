@@ -440,7 +440,7 @@
 </ul>
 </li>
 <li>逆序情况<ul>
-<li>$$T(n) = \sum_{j=2}^n{\theta(n)} = \theta(n^2)$$</li>
+<li><script type="math/tex; mode=display">T(n) = \sum_{j=2}^n{\theta(n)} = \theta(n^2)</script></li>
 </ul>
 </li>
 <li>θ是个弱符号，与其说是个运算符号，不如说是个描述符号</li>
@@ -470,7 +470,7 @@
 </li>
 </ul>
 </li>
-<li><p>归并排序<br>  MergeSort A[1…n] | T(n)<br>  —|— </p>
+<li><p>归并排序<br>  MergeSort A[1…n] | T(n)<br>  —-|—- </p>
 <ol>
 <li>If n = 1, done |  θ(1)</li>
 <li>递归地，排序 A[1,…,ceil(n/2)] 和A [ceil(n/2)+1,….,n]  | 2T(n/2)</li>
@@ -478,8 +478,11 @@
 </ol>
 <ul>
 <li>关键子步骤：归并。n个元素时间为θ(n)，常称为线性时间。<blockquote>
-<p>因此<br>  $$T(n) = \begin{cases}<br>  \theta(1), if n=1\<br>  2T(n/2)+\theta(n)+\theta(1) = 2T(n/2)+\theta(n)\<br>  \end{cases}<br>  $$</p>
-</blockquote>
+<p>因此 </p>
+<script type="math/tex; mode=display">T(n) = \begin{cases}
+  \theta(1), if n=1\\
+  2T(n/2)+\theta(n)+\theta(1) = 2T(n/2)+\theta(n)\\
+  \end{cases}</script></blockquote>
 </li>
 <li><p>如何解递归式——递归树方法<br>$T(n)=2T(n/2)+cn$，const c&gt;0<br>把上式写成树状 T(n) = </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">cn--&gt;T(n/2)</span><br><span class="line">cn--&gt;T`(n/2)</span><br></pre></td></tr></table></figure>
@@ -487,8 +490,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">cn--&gt;cn/2</span><br><span class="line">cn--&gt;`(cn/2)</span><br><span class="line">cn/2--&gt;T(n/4)</span><br><span class="line">cn/2--&gt;T`(n/4)</span><br><span class="line">`(cn/2)--&gt;T``(n/4)</span><br><span class="line">`(cn/2)--&gt;T```(n/4)</span><br></pre></td></tr></table></figure>
 <p>等于…</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">cn--&gt;cn/2</span><br><span class="line">cn--&gt;`(cn/2)</span><br><span class="line">cn/2--&gt;T(n/4)</span><br><span class="line">cn/2--&gt;T`(n/4)</span><br><span class="line">`(cn/2)--&gt;T``(n/4)</span><br><span class="line">`(cn/2)--&gt;T```(n/4)</span><br><span class="line">T(n/4)--&gt;...</span><br><span class="line">... --&gt;θ1</span><br></pre></td></tr></table></figure>
-<p>树的高度h = lgn<br>叶节点数目leaves = n<br>每一层都做了cn的工作，叶节点层加起来做了θ(n)的工作。故<br>$$T(n) = cn*lgn + \theta(n) = \theta(nlgn)$$   </p>
-</li>
+<p>树的高度h = lgn<br>叶节点数目leaves = n<br>每一层都做了cn的工作，叶节点层加起来做了θ(n)的工作。故</p>
+<script type="math/tex; mode=display">T(n) = cn*lgn + \theta(n) = \theta(nlgn)</script></li>
 <li>超过30个元素，归并就比插入快。</li>
 </ul>
 </li>

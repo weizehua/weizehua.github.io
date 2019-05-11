@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="主机规划与磁盘分区2.1 Linux与硬件的搭配 Linux对于计算机个组件的分辨，与贯用的Windows系统完全不一样，因为各个组件在Linux下都是一个文件。因此在认识各项组件之后，学习Linux的装置档名之前，务必要现将Windows对于组件的名称的概念先拿掉，否则会很难理解。  2.1.3 各硬件装置在Linux中的档名 选择好你所需要的硬件配备后，接下来得要了解一下各硬件在Linux当中">
+<meta name="description" content="主机规划与磁盘分区2.1 Linux与硬件的搭配 Linux对于计算机个组件的分辨，与贯用的Windows系统完全不一样，因为各个组件在Linux下都是一个文件。因此在认识各项组件之后，学习Linux的装置档名之前，务必要现将Windows对于组件的名称的概念先拿掉，否则会很难理解。 2.1.3 各硬件装置在Linux中的档名 选择好你所需要的硬件配备后，接下来得要了解一下各硬件在Linux当中所">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux鸟哥的私房菜第2章">
 <meta property="og:url" content="https://weizehua.github.io/2019/04/15/Linux鸟哥的私房菜第2章/index.html">
 <meta property="og:site_name" content="Wzh&#39;s Blog">
-<meta property="og:description" content="主机规划与磁盘分区2.1 Linux与硬件的搭配 Linux对于计算机个组件的分辨，与贯用的Windows系统完全不一样，因为各个组件在Linux下都是一个文件。因此在认识各项组件之后，学习Linux的装置档名之前，务必要现将Windows对于组件的名称的概念先拿掉，否则会很难理解。  2.1.3 各硬件装置在Linux中的档名 选择好你所需要的硬件配备后，接下来得要了解一下各硬件在Linux当中">
+<meta property="og:description" content="主机规划与磁盘分区2.1 Linux与硬件的搭配 Linux对于计算机个组件的分辨，与贯用的Windows系统完全不一样，因为各个组件在Linux下都是一个文件。因此在认识各项组件之后，学习Linux的装置档名之前，务必要现将Windows对于组件的名称的概念先拿掉，否则会很难理解。 2.1.3 各硬件装置在Linux中的档名 选择好你所需要的硬件配备后，接下来得要了解一下各硬件在Linux当中所">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-04-15T12:42:18.259Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux鸟哥的私房菜第2章">
-<meta name="twitter:description" content="主机规划与磁盘分区2.1 Linux与硬件的搭配 Linux对于计算机个组件的分辨，与贯用的Windows系统完全不一样，因为各个组件在Linux下都是一个文件。因此在认识各项组件之后，学习Linux的装置档名之前，务必要现将Windows对于组件的名称的概念先拿掉，否则会很难理解。  2.1.3 各硬件装置在Linux中的档名 选择好你所需要的硬件配备后，接下来得要了解一下各硬件在Linux当中">
+<meta name="twitter:description" content="主机规划与磁盘分区2.1 Linux与硬件的搭配 Linux对于计算机个组件的分辨，与贯用的Windows系统完全不一样，因为各个组件在Linux下都是一个文件。因此在认识各项组件之后，学习Linux的装置档名之前，务必要现将Windows对于组件的名称的概念先拿掉，否则会很难理解。 2.1.3 各硬件装置在Linux中的档名 选择好你所需要的硬件配备后，接下来得要了解一下各硬件在Linux当中所">
 
 
 
@@ -371,27 +371,30 @@
       
         <h1 id="主机规划与磁盘分区"><a href="#主机规划与磁盘分区" class="headerlink" title="主机规划与磁盘分区"></a>主机规划与磁盘分区</h1><h2 id="2-1-Linux与硬件的搭配"><a href="#2-1-Linux与硬件的搭配" class="headerlink" title="2.1 Linux与硬件的搭配"></a>2.1 Linux与硬件的搭配</h2><blockquote>
 <p>Linux对于计算机个组件的分辨，与贯用的Windows系统完全不一样，因为<strong>各个组件在Linux下都是一个文件</strong>。因此在认识各项组件之后，学习Linux的装置档名之前，务必要现将Windows对于组件的名称的概念先拿掉，否则会很难理解。</p>
-</blockquote>
 <h3 id="2-1-3-各硬件装置在Linux中的档名"><a href="#2-1-3-各硬件装置在Linux中的档名" class="headerlink" title="2.1.3 各硬件装置在Linux中的档名"></a>2.1.3 各硬件装置在Linux中的档名</h3><ul>
 <li>选择好你所需要的硬件配备后，接下来得要了解一下各硬件在Linux当中所扮演的角色。举例来说，IDE接口的硬盘的文件名称即为/dev/hd[a-d]，其中， 括号内的字母为a-d当中的任意一个，亦即有/dev/hda, /dev/hdb, /dev/hdc, 及 /dev/hdd这四个文件的意思。<ul>
 <li>中括号[]表示法在后面会频繁使用。</li>
 <li>几乎所有硬件装置文件都在/dev这个目录内。</li>
 </ul>
 </li>
-<li><p>常见装置与其在Linux中的档名</p>
-<ul>
-<li>装置 |  档名<ul>
-<li>| -<br>IDE硬盘机 | /dev/hd[a-d]（已被淘汰，被模拟成/dev/sd[a-p]了）<br><strong>SCSI/SATA/U盘硬盘机</strong> | /dev/sd[a-p]<br>U盘快闪碟 | /dev/sd[a-p] （与SATA同）<br><strong>VirtualI/O界面</strong> | /dev/vd[a-p]（用于虚拟机器内）<br>软盘机 | /dev/fd[0-1]<br>打印机 | U盘：/dev/usb/lp[0-15]<br>鼠标 | U盘：/dev/usb/mouse[0-15]<br>当前CDROM/DVDROM | /dev/cdrom<br>当前的鼠标 | /dev/mouse</li>
+<li>常见装置与其在Linux中的档名</li>
 </ul>
-</li>
-<li>特别留意硬盘（IDE/SCSI/U盘），每个磁碟机的磁盘分区不同时，其碟档名会改变。记住IDE与SATA硬盘的档名就是了。</li>
-</ul>
-</li>
-</ul>
-<hr>
+</blockquote>
+<pre><code>- 装置 |  档名
+    - | -
+    IDE硬盘机 | /dev/hd[a-d]（已被淘汰，被模拟成/dev/sd[a-p]了）
+    **SCSI/SATA/U盘硬盘机** | /dev/sd[a-p]
+    U盘快闪碟 | /dev/sd[a-p] （与SATA同）
+    **VirtualI/O界面** | /dev/vd[a-p]（用于虚拟机器内）
+    软盘机 | /dev/fd[0-1]
+    打印机 | U盘：/dev/usb/lp[0-15]
+    鼠标 | U盘：/dev/usb/mouse[0-15]
+    当前CDROM/DVDROM | /dev/cdrom
+    当前的鼠标 | /dev/mouse
+- 特别留意硬盘（IDE/SCSI/U盘），每个磁碟机的磁盘分区不同时，其碟档名会改变。记住IDE与SATA硬盘的档名就是了。
+</code></pre><hr>
 <h2 id="2-2-磁盘分割"><a href="#2-2-磁盘分割" class="headerlink" title="2.2 磁盘分割"></a>2.2 磁盘分割</h2><blockquote>
 <p>Linux是安装在磁盘上的。我们知道Windows上磁盘可以分为C、D、E盘，但Linux的硬件都是以档案的形态存在，那分区的名称又是什么？如何进行磁盘分区？磁盘分区有哪些限制？目前的BIOS与UEFI分别是啥？MSDOS与GPT又是啥？</p>
-</blockquote>
 <h3 id="2-2-1-磁盘连接的方式与装置档名的关系"><a href="#2-2-1-磁盘连接的方式与装置档名的关系" class="headerlink" title="2.2.1 磁盘连接的方式与装置档名的关系"></a>2.2.1 磁盘连接的方式与装置档名的关系</h3><ul>
 <li>目前，SATA/USB/SAS/IDE接口的磁盘的装置名都是/dev/sd[a-p]，虚拟机环境下为了加速，会使用/dev/vd[a-p]这种装置名。</li>
 <li>根据<strong>Linux内核侦测到的磁盘顺序</strong>来决定装置名。SATA磁盘比USB先识别到，以sda、sdb、sdc…的顺序分配名字。</li>
@@ -402,8 +405,7 @@
 </li>
 </ul>
 <hr>
-<h3 id="2-2-2-MSDOS-MBR-与-GPT-磁盘分割表-partition-table"><a href="#2-2-2-MSDOS-MBR-与-GPT-磁盘分割表-partition-table" class="headerlink" title="2.2.2 MSDOS(MBR) 与 GPT 磁盘分割表(partition table)"></a>2.2.2 MSDOS(MBR) 与 GPT 磁盘分割表(partition table)</h3><blockquote>
-<p>通常硬盘有多个磁盘，柱面通常是分割分区的最小单位。因为近来有GPT这个可以达到64bit记录功能的分割表，现在甚至可以用扇区号来作为分割单位。</p>
+<h3 id="2-2-2-MSDOS-MBR-与-GPT-磁盘分割表-partition-table"><a href="#2-2-2-MSDOS-MBR-与-GPT-磁盘分割表-partition-table" class="headerlink" title="2.2.2 MSDOS(MBR) 与 GPT 磁盘分割表(partition table)"></a>2.2.2 MSDOS(MBR) 与 GPT 磁盘分割表(partition table)</h3><p>通常硬盘有多个磁盘，柱面通常是分割分区的最小单位。因为近来有GPT这个可以达到64bit记录功能的分割表，现在甚至可以用扇区号来作为分割单位。</p>
 <ul>
 <li>MSDOS（MBR）分割表格式与限制<ul>
 <li>早期的Linux为了兼容Windows的磁盘，因此使用的是支持Windows的MBR方式来处理开机管理程序和分割表。这两个都放在硬盘的第一个分区，通常都是512B。<ul>
@@ -444,11 +446,7 @@
     - 无法抓取到2.2T以上的磁盘容量
     - MBR只有一个区块，若被破坏，磁盘基本无法挽救
     - MBR内的存放开机管理程序的区块只有446B，无法容纳较多的程序。
-</code></pre><ul>
-<li>GUID partition table磁盘分割表</li>
-</ul>
-<hr>
-<h3 id="2-2-3-开机流程中的BIOS与UEFI开机检测程序"><a href="#2-2-3-开机流程中的BIOS与UEFI开机检测程序" class="headerlink" title="2.2.3 开机流程中的BIOS与UEFI开机检测程序"></a>2.2.3 开机流程中的BIOS与UEFI开机检测程序</h3><blockquote>
+</code></pre><h2 id="GUID-partition-table磁盘分割表"><a href="#GUID-partition-table磁盘分割表" class="headerlink" title="- GUID partition table磁盘分割表"></a>- GUID partition table磁盘分割表</h2><h3 id="2-2-3-开机流程中的BIOS与UEFI开机检测程序"><a href="#2-2-3-开机流程中的BIOS与UEFI开机检测程序" class="headerlink" title="2.2.3 开机流程中的BIOS与UEFI开机检测程序"></a>2.2.3 开机流程中的BIOS与UEFI开机检测程序</h3><blockquote>
 <p>电脑是如何读取硬盘内的操作系统？<br>目前载入硬件驱动方面的程序，主要有早期的BIOS与新兴UEFI两种机制</p>
 <ul>
 <li>BIOS搭配MBR/GPT的开机流程<ul>
@@ -661,7 +659,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#主机规划与磁盘分区"><span class="nav-text">主机规划与磁盘分区</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Linux与硬件的搭配"><span class="nav-text">2.1 Linux与硬件的搭配</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-各硬件装置在Linux中的档名"><span class="nav-text">2.1.3 各硬件装置在Linux中的档名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-磁盘分割"><span class="nav-text">2.2 磁盘分割</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1-磁盘连接的方式与装置档名的关系"><span class="nav-text">2.2.1 磁盘连接的方式与装置档名的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2-MSDOS-MBR-与-GPT-磁盘分割表-partition-table"><span class="nav-text">2.2.2 MSDOS(MBR) 与 GPT 磁盘分割表(partition table)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-3-开机流程中的BIOS与UEFI开机检测程序"><span class="nav-text">2.2.3 开机流程中的BIOS与UEFI开机检测程序</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#主机规划与磁盘分区"><span class="nav-text">主机规划与磁盘分区</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Linux与硬件的搭配"><span class="nav-text">2.1 Linux与硬件的搭配</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-各硬件装置在Linux中的档名"><span class="nav-text">2.1.3 各硬件装置在Linux中的档名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-磁盘分割"><span class="nav-text">2.2 磁盘分割</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1-磁盘连接的方式与装置档名的关系"><span class="nav-text">2.2.1 磁盘连接的方式与装置档名的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2-MSDOS-MBR-与-GPT-磁盘分割表-partition-table"><span class="nav-text">2.2.2 MSDOS(MBR) 与 GPT 磁盘分割表(partition table)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GUID-partition-table磁盘分割表"><span class="nav-text">- GUID partition table磁盘分割表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-3-开机流程中的BIOS与UEFI开机检测程序"><span class="nav-text">2.2.3 开机流程中的BIOS与UEFI开机检测程序</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
