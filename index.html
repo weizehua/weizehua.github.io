@@ -390,7 +390,7 @@
 
       
         
-          <h1 id="算法导论-MIT"><a href="#算法导论-MIT" class="headerlink" title="算法导论-MIT"></a>算法导论-MIT</h1><h2 id="第一节-课程简介及算法分析"><a href="#第一节-课程简介及算法分析" class="headerlink" title="第一节 课程简介及算法分析"></a>第一节 课程简介及算法分析</h2>
+          <h1 id="第一节-课程简介及算法分析"><a href="#第一节-课程简介及算法分析" class="headerlink" title="第一节 课程简介及算法分析"></a>第一节 课程简介及算法分析</h1>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/05/11/MIT算法导论1/#more" rel="contents">
@@ -1500,6 +1500,14 @@
 
 
 
+
+  <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
         
 
 
@@ -1984,6 +1992,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
